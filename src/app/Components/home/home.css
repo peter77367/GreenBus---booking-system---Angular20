@@ -1,0 +1,186 @@
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  height: 550px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.50;
+}
+
+.search-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.main-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #104d01;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #f4f7f5;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.trip-search-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+  margin: auto;
+}
+
+.search-btn {
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .trip-search-box {
+    padding: 20px 15px;
+  }
+
+  .col-md-6 {
+    margin-bottom: 15px;
+  }
+}
+
+
+
+
+/* whyyyyyy */
+
+
+.why-greenbus-section {
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-30px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+}
+.feature-img {
+  max-height: 180px; 
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+/* how to book */
+
+.how-to-book-section {
+  background-image: url('/How.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.how-to-book-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(241, 235, 235, 0.6);
+  z-index: 0;
+}
+
+.how-to-book-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+.how-to-book-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.how-steps {
+  list-style-type: decimal;
+  padding-left: 20px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.how-steps li {
+  margin-bottom: 10px;
+}
+.booking-steps {
+  font-size: 1.7rem; 
+  font-weight: 700;
+  line-height: 1.8;
+}
+.booking-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.step-box {
+  border: 5px solid #28a745; 
+  border-radius: 50px;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  background-color: #f8fff8; 
+  color: #000;
+  transition: transform 0.2s ease;
+}
+
+.step-box:hover {
+  transform: scale(1.1);
+}
+
+.outlined-text {
+  color: rgb(4, 107, 47); 
+  -webkit-text-stroke: .8px rgb(236, 240, 236); 
+  font-weight: bold;
+}

@@ -1,0 +1,219 @@
+{
+  "users": [
+    {
+      "id": "4886",
+      "name": "peter",
+      "phone": "01234343434",
+      "email": "peter@peter",
+      "password": "fdsfsdfds"
+    },
+    {
+      "id": "3ba9",
+      "name": "peter2",
+      "phone": "01211111111",
+      "email": "d@d",
+      "password": "12233344"
+    },
+    {
+      "id": "d709",
+      "name": "peter",
+      "phone": "01276767676",
+      "email": "p@p",
+      "password": "12233344"
+    }
+  ],
+  "stations": [
+    {
+      "id": 1,
+      "name": "Ramses Station",
+      "city": "Cairo",
+      "mapUrl": "https://www.google.com/maps?q=Ramses+Station+Cairo"
+    },
+    {
+      "id": 2,
+      "name": "Sidi Gaber Station",
+      "city": "Alexandria",
+      "mapUrl": "https://www.google.com/maps?q=Sidi+Gaber+Station+Alexandria"
+    },
+    {
+      "id": 3,
+      "name": "Mansoura University Station",
+      "city": "Mansoura",
+      "mapUrl": "https://www.google.com/maps?q=Mansoura+University+Station"
+    },
+    {
+      "id": 4,
+      "name": "Giza Square Station",
+      "city": "Giza",
+      "mapUrl": "https://www.google.com/maps?q=Giza+Square+Station"
+    },
+    {
+      "id": 5,
+      "name": "Aswan High Dam Station",
+      "city": "Aswan",
+      "mapUrl": "https://www.google.com/maps?q=Aswan+High+Dam+Station"
+    },
+    {
+      "id": 6,
+      "name": "Karnak Station",
+      "city": "Luxor",
+      "mapUrl": "https://www.google.com/maps?q=Karnak+Station+Luxor"
+    },
+    {
+      "id": 7,
+      "name": "Sohag University Station",
+      "city": "Sohag",
+      "mapUrl": "https://www.google.com/maps?q=Sohag+University+Station"
+    },
+    {
+      "id": 8,
+      "name": "Asyut Train Station",
+      "city": "Asyut",
+      "mapUrl": "https://www.google.com/maps?q=Asyut+Train+Station"
+    },
+    {
+      "id": 9,
+      "name": "Banha Station",
+      "city": "Qalyubia",
+      "mapUrl": "https://www.google.com/maps?q=Banha+Station"
+    },
+    {
+      "id": 10,
+      "name": "South valey",
+      "city": "Qena",
+      "mapUrl": "https://www.google.com/maps?q=Cairo+International+Airport"
+    }
+  ],
+ "trips": [
+  {
+    "id": 1,
+    "from": "Cairo",
+    "to": "Alexandria",
+    "date": "2025-08-01",
+    "departureTime": "08:00",
+    "arrivalTime": "11:00",
+    "price": 150,
+    "duration": "3h"
+  },
+  {
+    "id": 2,
+    "from": "Qena",
+    "to": "Mansoura",
+    "date": "2025-08-02",
+    "departureTime": "06:30",
+    "arrivalTime": "14:00",
+    "price": 120,
+    "duration": "7.5h"
+  },
+  {
+    "id": 3,
+    "from": "Alexandria",
+    "to": "Cairo",
+    "date": "2025-08-03",
+    "departureTime": "17:00",
+    "arrivalTime": "20:00",
+    "price": 140,
+    "duration": "3h"
+  },
+  {
+    "id": 4,
+    "from": "Cairo",
+    "to": "Giza",
+    "date": "2025-08-03",
+    "departureTime": "12:00",
+    "arrivalTime": "12:30",
+    "price": 50,
+    "duration": "0.5h"
+  },
+  {
+    "id": 5,
+    "from": "Cairo",
+    "to": "Aswan",
+    "date": "2025-08-04",
+    "departureTime": "20:00",
+    "arrivalTime": "06:00",
+    "price": 300,
+    "duration": "10h"
+  },
+  {
+    "id": 6,
+    "from": "Cairo",
+    "to": "Luxor",
+    "date": "2025-08-04",
+    "departureTime": "15:00",
+    "arrivalTime": "00:00",
+    "price": 280,
+    "duration": "9h"
+  },
+  {
+    "id": 7,
+    "from": "Giza",
+    "to": "Aswan",
+    "date": "2025-08-04",
+    "departureTime": "18:30",
+    "arrivalTime": "04:00",
+    "price": 290,
+    "duration": "9.5h"
+  },
+  {
+    "id": 8,
+    "from": "Luxor",
+    "to": "Asyut",
+    "date": "2025-08-05",
+    "departureTime": "09:00",
+    "arrivalTime": "14:00",
+    "price": 160,
+    "duration": "5h"
+  },
+  {
+    "id": 9,
+    "from": "Aswan",
+    "to": "Sohag",
+    "date": "2025-08-05",
+    "departureTime": "13:00",
+    "arrivalTime": "19:00",
+    "price": 200,
+    "duration": "6h"
+  },
+  {
+    "id": 10,
+    "from": "Mansoura",
+    "to": "Qalyubia",
+    "date": "2025-08-06",
+    "departureTime": "07:00",
+    "arrivalTime": "09:00",
+    "price": 100,
+    "duration": "2h"
+  },
+  {
+    "id": 11,
+    "from": "Qalyubia",
+    "to": "Cairo",
+    "date": "2025-08-06",
+    "departureTime": "10:30",
+    "arrivalTime": "11:30",
+    "price": 70,
+    "duration": "1h"
+  },
+  {
+    "id": 12,
+    "from": "Qalyubia",
+    "to": "Cairo",
+    "date": "2025-08-06",
+    "departureTime": "7:30",
+    "arrivalTime": "1:30",
+    "price": 70,
+    "duration": "1h"
+  },
+  {
+    "id": 13,
+    "from": "Qalyubia",
+    "to": "Cairo",
+    "date": "2025-08-06",
+    "departureTime": "7:30",
+    "arrivalTime": "1:30",
+    "price": 70,
+    "duration": "1h"
+  }
+]
+}

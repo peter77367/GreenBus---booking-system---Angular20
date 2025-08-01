@@ -1,0 +1,82 @@
+  <!-- Search Box -->
+  <div class="trip-search-box container my-5 border border-success rounded-3 p-4 bg-white">
+    <div class="row g-3 align-items-end justify-content-center">
+      <!-- From -->
+      <div class="col-lg-3 col-md-6">
+        <label for="fromStation" class="form-label text-black">From :</label>
+        <select class="form-select" [(ngModel)]="from" id="fromStation">
+          <option disabled selected value="">Select departure</option>
+          <option *ngFor="let station of stations" [value]="station">{{ station }}</option>
+        </select>
+      </div>
+
+      <!-- To -->
+      <div class="col-lg-3 col-md-6">
+        <label for="toStation" class="form-label text-black">To :</label>
+        <select class="form-select" [(ngModel)]="to" id="toStation">
+          <option disabled selected value="">Select destination</option>
+          <option *ngFor="let station of stations" [value]="station">{{ station }}</option>
+        </select>
+      </div>
+
+      <!-- Date -->
+      <div class="col-lg-3 col-md-6">
+        <label for="travelDate" class="form-label text-black">Date :</label>
+        <input type="date" class="form-control" [(ngModel)]="date" id="travelDate">
+      </div>
+
+      <!-- Search -->
+      <div class="col-lg-3 col-md-6 d-grid">
+        <button class="btn btn-success search-btn" (click)="searchAgain()" [disabled]="!from || !to || !date">
+          Search Again
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Results -->
+  <div class="trip-results container mt-4" *ngIf="trips.length > 0">
+    <h4 class="mb-4 text-primary">Available Trips:</h4>
+
+    <div *ngFor="let trip of trips" class="trip-card border rounded shadow-sm p-4 mb-3 bg-light">
+      <div class="row text-center text-md-start align-items-center">
+
+        <!-- From -->
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="fw-bold fs-5 text-success">{{ trip.departureTime }}</div>
+          <div class="text-muted small">From</div>
+          <div>{{ trip.from }}</div>
+        </div>
+
+        <!-- Arrow -->
+        <div class="col-md-1 d-none d-md-flex justify-content-center">
+          <i class="bi bi-arrow-right fs-4 text-secondary"></i>
+        </div>
+
+        <!-- To -->
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="fw-bold fs-5 text-danger">{{ trip.arrivalTime }}</div>
+          <div class="text-muted small">To</div>
+          <div>{{ trip.to }}</div>
+        </div>
+
+        <!-- Date -->
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="text-muted small">Date</div>
+          <div class="fw-semibold">{{ trip.date }}</div>
+        </div>
+
+        <!-- Action -->
+        <div class="col-md-2 text-center">
+        <!-- Button to open modal -->
+              <button class="btn btn-outline-success" (click)="openSeatModal(trip)">Select Seat</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- No Trips Found -->
+  <div class="alert alert-warning text-center mt-4 mb-3 fw-bold" *ngIf="trips.length === 0 && date">
+    No trips found matching your search.
+  </div>

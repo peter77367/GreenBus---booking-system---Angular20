@@ -1,0 +1,132 @@
+<div class="hero-section position-relative text-white">
+  <img src="/homePanner1.jpg" class="w-100 banner-img" alt="banner image" />
+
+  <!-- Overlay Content -->
+  <div class="search-box text-center">
+    <h2 class="main-title mb-2 outlined-text">Book Your Bus Now</h2>
+    <p class="subtitle mb-4">
+      Plan your trip easily and travel safely with GreenBus to your favorite destination
+    </p>
+
+    <!-- Search Box -->
+    <div class="trip-search-box container">
+      <div class="row g-3 align-items-end justify-content-center">
+        <!-- From -->
+        <div class="col-lg-3 col-md-6">
+          <label for="fromStation" class="form-label text-black">From : </label>
+          <select class="form-select" [(ngModel)]="fromStation" id="fromStation">
+            <option disabled selected value="">Select departure</option>
+            <option *ngFor="let station of stations" [value]="station">{{ station }}</option>
+          </select>
+        </div>
+
+        <!-- To -->
+        <div class="col-lg-3 col-md-6">
+          <label for="toStation" class="form-label text-black">To : </label>
+          <select class="form-select" [(ngModel)]="toStation" id="toStation">
+            <option disabled selected value="">Select destination</option>
+            <option *ngFor="let station of stations" [value]="station">{{ station }}</option>
+          </select>
+        </div>
+
+        <!-- Date -->
+        <div class="col-lg-3 col-md-6">
+          <label for="travelDate" class="form-label text-black">Date : </label>
+          <input type="date" class="form-control" [(ngModel)]="travelDate" id="travelDate">
+        </div>
+
+        <!-- Search -->
+        <div class="col-lg-3 col-md-6 d-grid">
+          <button 
+  class="btn btn-success search-btn" 
+  routerLink="/searchresult"
+  (click)="navigateToSearch()"
+  [disabled]="!fromStation || !toStation || !travelDate">
+  Search
+    </button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- WHY TRAVEL SECTION -->
+<section class="why-greenbus-section py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="section-title text-success mb-4">Why Travel with GreenBus...?</h2>
+    <p class="section-subtitle text-muted mb-5">
+      At GreenBus, we’re committed to providing a safe, comfortable, and seamless travel experience at unbeatable
+      prices.
+    </p>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="feature-card p-4 h-100 shadow rounded text-center">
+          <img src="/safe.jpg" alt="Safety Icon" class="mb-3 img-fluid feature-img">
+          <h5 class="text-success fw-bold fs-4">Safety First</h5>
+          <p class="text-muted">Trained drivers, modern buses, and strict safety protocols ensure you arrive safely.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="feature-card p-4 h-100 shadow rounded text-center">
+          <img src="/comfort.jpg" alt="Comfort Icon" class="mb-3 img-fluid feature-img">
+          <h5 class="text-success fw-bold fs-4">Ultimate Comfort</h5>
+          <p class="text-muted">Air-conditioned buses with comfortable seating and onboard entertainment options.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="feature-card p-4 h-100 shadow rounded text-center">
+          <img src="/booking.jpg" alt="Booking Icon" class="mb-3 img-fluid feature-img">
+          <h5 class="text-success fw-bold fs-4">Easy Booking</h5>
+          <p class="text-muted">Book your trip in seconds via our website. Choose your seat and pay securely.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+<!-- How to Book Section -->
+<section class="how-to-book-section ">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Side: Title -->
+      <div class="col-md-6">
+       <h2 class="display-5 fw-bolder outlined-text mb-4">How to Book a Ticket ?</h2>
+
+      </div>
+      <!-- Right Side: Steps -->
+      <div class="col-md-6">
+        <div class="booking-steps">
+          <div class="step-box mb-3"> Choose your origin and destination.</div>
+          <div class="step-box mb-3"> Select the date of your trip.</div>
+          <div class="step-box mb-3"> Pick your preferred seat.</div>
+          <div class="step-box mb-3"> Complete the payment securely.</div>
+          <div class="step-box mb-3"> Receive your ticket instantly via email/SMS.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

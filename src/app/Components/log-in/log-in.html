@@ -1,0 +1,59 @@
+<div class="container my-5" >
+  <div class="d-flex flex-column flex-md-row align-items-center justify-content-center ">
+    
+    <!-- Left Side: Image -->
+     <div class="col-md-6 p-0 d-none d-md-block">
+       <img src="/green.jpg" class="img-fluid rounded shadow" alt="Login Illustration" />
+    </div>
+
+    <!-- Right Side: Login Form -->
+    <div class="w-100 w-md-50 px-4">
+      <h2 class="text-center text-success mb-4">Login</h2>
+      
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label>Email</label>
+    <input type="email" formControlName="email" class="form-control" placeholder="Enter your email" />
+    <div class="text-danger small" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+      Email is required and must be valid.
+    </div>
+  </div>
+
+  <div class="mb-3 position-relative">
+    <label>Password</label>
+    <input
+      [type]="showPassword ? 'text' : 'password'"
+      formControlName="password"
+      class="form-control"
+      placeholder="Enter your password"
+    />
+    <i
+      class="fa"
+      [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'"
+      (click)="togglePasswordVisibility()"
+      style="position: absolute; top: 38px; right: 15px; cursor: pointer;"
+    ></i>
+    <div class="text-danger small" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+      Password is required (min 6 characters).
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-success w-100">Login</button>
+</form>
+
+      <!-- Register Link -->
+      <div class="text-center mt-4">
+        <span class="text-muted">Don’t have an account ?</span>
+        <a href="#" class="text-decoration-none text-primary fw-bold ms-1" routerLink="/register">Register !</a>
+      </div>
+
+      <!-- Optional Error Alert -->
+      <!-- <div class="alert alert-danger mt-3">
+        Invalid credentials, please try again.
+      </div> -->
+    </div>
+
+  </div>
+</div>
+
+

@@ -1,0 +1,14 @@
+<div class="container mt-4">
+  <h2 class="text-success mb-4 text-center">All Stations</h2>
+
+  <div class="stations-container">
+  <div class="station-card" *ngFor="let station of stations">
+    <h5 class="station-name">{{ station.name }}</h5>
+    <p class="station-city">{{ station.city }}</p>
+    <a [href]="station.mapUrl" target="_blank" class="map-link" title="View on Google Maps">
+      <i class="fas fa-map-marker-alt"></i>
+    </a>
+  </div>
+</div>
+
+</div>

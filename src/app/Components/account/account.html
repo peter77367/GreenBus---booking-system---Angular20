@@ -1,0 +1,68 @@
+<div class="account-container m-5">
+  <div class="account-sidebar">
+    <ul>
+      <li [class.active]="activeTab === 'info'" (click)="activeTab = 'info'">My Personal Information <span>›</span></li>
+      <li [class.active]="activeTab === 'phone'" (click)="activeTab = 'phone'">Phone Number <span>›</span></li>
+      <li [class.active]="activeTab === 'password'" (click)="activeTab = 'password'">Password <span>›</span></li>
+      <li class="signout" (click)="logout()"><i class="bi bi-box-arrow-right"></i> Sign Out <span>›</span></li>
+    </ul>
+  </div>
+
+  <div class="account-content">
+     
+    <!-- Personal Info Tab -->
+    <form *ngIf="activeTab === 'info'" (ngSubmit)="saveChanges()" #form="ngForm">
+         <h3 class="text-center"> Personal Information </h3>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" class="form-control" [(ngModel)]="user.name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" class="form-control" [(ngModel)]="user.email" name="email" required />
+      </div>
+      <button type="submit" class="btn-save">Save Changes</button>
+    </form>
+
+   <!-- Phone Tab -->
+<form *ngIf="activeTab === 'phone'" (ngSubmit)="updatePhone()">
+  <h3 class="text-center">Update Phone Number</h3>
+  <p class="text-center"> Enter the new phone number and your password to change your phone number </p>
+
+  <div class="form-group">
+    <label>Phone Number</label>
+    <input type="tel" class="form-control" [(ngModel)]="user.phone" name="newPhone" required>
+  </div>
+
+  <div class="form-group">
+    <label>Current Password</label>
+    <input type="password" class="form-control" [(ngModel)]="currentPassword" name="phoneCurrentPassword" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary w-100">Save Phone</button>
+</form>
+
+   <!-- Password Tab -->
+<form *ngIf="activeTab === 'password'" (ngSubmit)="updatePassword()">
+  <h3 class="text-center">Update Password</h3>
+
+  <div class="form-group">
+    <label>Current Password</label>
+    <input type="password" class="form-control" name="currentPassword" [(ngModel)]="currentPasswordForPassword" required>
+  </div>
+
+  <div class="form-group">
+    <label>New Password</label>
+    <input type="password" class="form-control" name="newPassword" [(ngModel)]="newPassword" required>
+  </div>
+
+  <div class="form-group">
+    <label>Confirm New Password</label>
+    <input type="password" class="form-control" name="confirmPassword" [(ngModel)]="confirmPassword" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary w-100">Save Password</button>
+</form>
+
+  </div>
+</div>
